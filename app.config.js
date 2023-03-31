@@ -1,4 +1,5 @@
-{
+import "dotenv/config"
+export default {
   "expo": {
     "name": "ChatAppTotorial",
     "slug": "ChatAppTotorial",
@@ -25,6 +26,16 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+
+    //ACA METEMOS LA INFO DE LA DATA DE FIREBASE, ACORDARSE DE EXPORT DEFAULT ARRIBA Y IMPORTAR DOTENV/CONFIG
+    "extra":{
+      apiKey: process.env.API_KEY,
+  authDomain: process.env.AUTH_DOMAIN,
+  projectId: process.env.PROJECT_ID,
+  storageBucket: process.env.STORAGE_BUCKET,
+  messagingSenderId: process.env.MESSAGING_SENDER_ID,
+  appId: process.env.APP_ID,
+    },
   }
 }
